@@ -1,0 +1,86 @@
+// ==============================
+//  home
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- hero ----------
+.home-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - var(--height-header));
+  overflow: hidden;
+  &__title {
+    font-size: min(10vw, 60px);
+    text-align: center;
+  }
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px) grayscale(100%) opacity(30%);
+  }
+}
+
+
+// ---------- profile ----------
+.home-profile {
+  max-width: 800px;
+  margin: 4em auto 0;
+  &__figure {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5em;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__name {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  &__desc {
+    p {
+      margin-bottom: 1em;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    margin-top: 2em;
+    padding-left: 0;
+    list-style: none;
+    li {
+      width: 40px;
+      height: 40px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      @include mq-hover {
+      transition: opacity 0.25s;
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

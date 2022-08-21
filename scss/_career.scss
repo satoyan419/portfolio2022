@@ -1,0 +1,59 @@
+// ==============================
+//  career
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- company ----------
+.company {
+  &__info {
+    th {
+      width: 6em;
+      margin-bottom: 0.5em;
+      @include mq(lg) {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+// ---------- project ----------
+.project {
+  &__info {
+    th {
+      width: 10em;
+      margin-bottom: 0.5em;
+      @include mq(lg) {
+        margin-bottom: 0;
+      }
+    }
+    dl:nth-child(n+2) {
+      margin-top: 0.5em;
+    }
+    dt {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.1em;
+      &:nth-child(n+2) {
+        margin-top: 0.5em;
+      }
+    }
+    dd {
+      padding-left: 1em;
+    }
+    p {
+      margin-bottom: 0;
+      &:nth-child(n+2) {
+        margin-top: 0.5em;
+      }
+    }
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}

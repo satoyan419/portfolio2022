@@ -1,0 +1,28 @@
+# Basic認証
+AuthType Basic
+AuthName "ユーザー名とパスワードを入力してください"
+AuthUserFile /home/satoyan419/www/portfolio/.htpasswd
+require valid-user
+
+
+
+# SSIの有効化
+AddHandler server-parsed .html
+
+
+
+# URLの正規化
+
+RewriteEngine on
+
+## wwwなしに統一
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+## indexなしに統一
+RewriteCond %{THE_REQUEST} ^.*/index.(html|php)
+RewriteRule ^(.*)index.(html|php)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+## httpsに統一
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

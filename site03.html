@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PNQB2KX');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>訪日外国人観光客向けの旅行商品一覧ページの改善 - ポートフォリオサイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../favicon.ico">
+  <script defer src="../js/main.js"></script>
+</head>
+<body id="top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNQB2KX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--#include file="svg.html" -->
+  <div class="wrapper">
+    <!--#include file="header.html" -->
+    <main class="content">
+      <div class="content-header">
+        <h1>訪日外国人観光客向けの<br>旅行商品一覧ページの改善</h1>
+      </div>
+      <!-- /.content-header -->
+      <div class="content-inner">
+        <section>
+          <h2>概要</h2>
+          <table class="site__info">
+            <tr>
+              <th>制作時期</th>
+              <td>2020年4月～2020年6月（2ヶ月）</td>
+            </tr>
+            <tr>
+              <th>職種</th>
+              <td>コーダー</td>
+            </tr>
+            <tr>
+              <th>担当内容</th>
+              <td>デモサイトの作成、提案資料の作成、コーディング、マニュアル作成</td>
+            </tr>
+            <tr>
+              <th>使用言語・ツール</th>
+              <td>
+                <dl>
+                  <dt>言語・CMS</dt>
+                  <dd>HTML, CSS (Sass), Vue.js</dd>
+                  <dt>ツール</dt>
+                  <dd>Visual Studio Code</dd>
+                </dl>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>制作のポイント</h2>
+          <p>訪日外国人観光客向けに高速バスやパッケージツアーなど旅行商品を販売している会社に勤務し、多言語サイトを運用していました。</p>
+          <p>旅行商品を販売するサイトは、英語・韓国語・繁体字中国語・簡体字中国語・ベトナム語・タイ語の6言語に対応しており、言語ごとにサイトが独立していました。</p>
+          <p>最も更新頻度が高かったページが、旅行商品一覧ページでした。旅行商品を追加・変更・削除する際は、言語ごとにHTMLファイルを編集する必要がありました。そのため、</p>
+          <ul>
+            <li>更新作業に工数がかかる</li>
+            <li>サムネイル画像やリンク先の間違いが発生する</li>
+          </ul>
+          <p>などの課題がありました。</p>
+          <figure class="site__figure">
+            <img class="site__image" loading="lazy" src="./img/travel_before.png" alt="変更前のファイル構成" width="1200" height="800">
+          </figure>
+          <p>上記の課題を解決するために、一つのJSONファイルを更新すれば各言語の旅行商品一覧ページに反映される仕組みを導入しました。</p>
+          <figure class="site__figure">
+            <img class="site__image" loading="lazy" src="./img/travel_after.png" alt="変更後のファイル構成" width="1200" height="800">
+          </figure>
+        </section>
+      </div>
+      <!-- /.content-inner -->
+    </main>
+    <!--#include file="footer.html" -->
+  </div>
+  <!-- /.wrapper -->
+</body>
+</html>

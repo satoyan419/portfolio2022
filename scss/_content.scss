@@ -1,0 +1,163 @@
+// ==============================
+//  content
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- content ----------
+.content {
+  flex: 1;
+  width: 100%;
+  padding-top: var(--height-header);
+}
+
+
+// ---------- header ----------
+.content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  padding: 1.5em 0;
+  background-color: #eee;
+  @include mq(sm) {
+    min-height: 160px;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    @include mq(sm) {
+      font-size: 24px;
+    }
+    br {
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// ---------- inner ----------
+.content-inner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 6em;
+  padding: 2em var(--gutter-x) 0;
+  h2:not([class]) {
+    margin: 4em -6px 2em;
+    padding: 0.5em 16px;
+    border-left: 6px solid var(--color-primary);
+    scroll-margin-top: var(--height-header);
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.4;
+    background-color: #eee;
+    @include mq(sm) {
+      margin-inline: -15px;
+      font-size: 1.4em;
+    }
+  }
+  h3 {
+    margin: 3em 0 2em;
+    padding: 0 0.5em calc(0.5em - 2px);
+    border-bottom: 2px solid var(--color-border);
+    scroll-margin-top: var(--height-header);
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.4;
+    @include mq(sm) {
+      font-size: 1.3em;
+    }
+  }
+  p:where(:not([class])) {
+    margin-bottom: 2em;
+  }
+  a:where(:not([class])) {
+    color: #1a0dab;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.1em;
+  }
+  table {
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    th, td {
+      display: block;
+      line-height: 1.5;
+      @include mq(lg) {
+        display: table-cell;
+      }
+    }
+    th {
+      padding-top: 0.5em;
+      text-align: left;
+      vertical-align: top;
+      @include mq(lg) {
+        padding-bottom: 0.5em;
+      }
+    }
+    td {
+      padding-bottom: 0.5em;
+      @include mq(lg) {
+        padding-top: 0.5em;
+      }
+    }
+  }
+  ul:not([class]) {
+    margin-bottom: 2em;
+    padding-left: 30px;
+  }
+}
+
+
+// ---------- toc ----------
+.content-toc {
+  max-width: 740px;
+  margin: 4em auto;
+  padding: 1.5em 1em 1em;
+  color: var(--color-base);
+  background-color: rgba(#000, 0.02);
+  border-block: 4px double var(--color-border);
+  @include mq(sm) {
+    padding: 2em;
+  }
+  &__title {
+    margin-bottom: 0.75em;
+    font-size: 1.2em;
+    line-height: 1;
+    text-align: center;
+  }
+  &__list {
+    list-style: none;
+    li {
+      margin: 0.25em;
+      line-height: 1.6;
+    }
+    > li {
+      padding-bottom: 0.5em;
+    }
+    ol {
+      list-style: none;
+      > li {
+        margin-left: 2em;
+      }
+    }
+    li li {
+      font-size: 0.9em;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      @include mq-hover {
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 0.1em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// ==============================
+//   base
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- custom properties ----------
+:root {
+  --color-base: #333;
+  --color-primary: #333;
+  --color-bg: #fff;
+  --color-border: #ddd;
+  --gutter-x: 15px;
+  --height-header: 60px;
+  @include mq(sm) {
+    --gutter-x: 30px;
+  }
+}
+
+
+// ---------- reset ----------
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+button, input, textarea {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+
+// ---------- base ----------
+html {
+  scroll-behavior: smooth;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

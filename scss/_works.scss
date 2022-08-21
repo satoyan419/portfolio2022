@@ -1,0 +1,53 @@
+// ==============================
+//  works
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- works ----------
+.works {
+  &__list {
+    display: grid;
+    padding-left: 0 !important;
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+    }
+  }
+  &__item {
+    max-width: 400px;
+    margin: 0 auto 2.5em;
+    list-style-type: none;
+  }
+  &__link {
+    color: var(--color-base);
+    text-decoration: none;
+  }
+  &__figure {
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.25s;
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+    }
+  }
+  &__desc {
+    padding-top: 0.5em;
+    font-weight: bold;
+    line-height: 1.5;
+    transition: opacity 0.25s;
+  }
+  @include mq-hover {
+    &__link:hover {
+      .works__figure {
+        opacity: 0.75;
+      }
+      .works__desc {
+        opacity: 0.75;
+      }
+    }
+  }
+}

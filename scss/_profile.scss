@@ -1,0 +1,22 @@
+// ==============================
+//  profile
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- qualification ----------
+.qualification {
+  &__table {
+    @include mq(lg) {
+      width: fit-content;
+      margin-inline: auto;
+    }
+    th {
+      font-weight: normal;
+      @include mq(lg) {
+        padding-right: 2em;
+      }
+    }
+  }
+}

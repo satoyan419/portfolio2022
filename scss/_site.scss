@@ -1,0 +1,42 @@
+// ==============================
+//  site
+// ==============================
+
+@use 'setting' as *;
+
+
+// ---------- site ----------
+.site {
+  &__figure {
+    margin-bottom: 2em;
+  }
+  &__image {
+    display: block;
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    height: auto;
+  }
+  &__info {
+    th {
+      width: 10em;
+      margin-bottom: 0.5em;
+      @include mq(lg) {
+        margin-bottom: 0;
+      }
+    }
+    dl:nth-child(n+2) {
+      margin-top: 0.5em;
+    }
+    dt {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.1em;
+      &:nth-child(n+2) {
+        margin-top: 0.5em;
+      }
+    }
+    dd {
+      padding-left: 1em;
+    }
+  }
+}
